@@ -1,0 +1,80 @@
+{% load static %}
+<html>
+    <head>
+        <title>Heart Disease UCI</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+
+<body>
+    <div class="login-box">
+        <h1>Heart Disease UCI</h1>
+        <h2>KNeighborsClassifier</h2>
+        <form action="calculate">
+            <div class="user-box">
+                <input type="text"  value="{{exp1}}"name="exp1" required="">
+                <label>Age</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp2}}" name="exp2" list="exampleList">
+                <label>sex:[0-male,1-female]</label>
+                <datalist id="exampleList">  
+                <option value="0">  
+                <option value="1">
+                </datalist>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp3}}" name="exp3" required="">
+                <label>chest pain type</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp4}}" name="exp4" required="">
+                <label>resting blood pressure</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp5}}" name="exp5" required="">
+                <label>serum cholestoralin </label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp6}}" name="exp6" required="">
+                <label>fasting blood sugar</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp7}}" name="exp7" required="">
+                <label>resting electrocardiographic result</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp8}}" name="exp8" required="">
+                <label>maximum heart rate achived</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp9}}" name="exp9" list="exampleList1">
+                <label>exercise induced[1=yes,2=no]</label>
+                <datalist id="exampleList1">  
+                <option value="0">  
+                <option value="1">
+                </datalist>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp10}}" name="exp10" required="">
+                <label>old peak</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp11}}" name="exp11" required="">
+                <label>slop of peak</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp12}}" name="exp12" required="">
+                <label>number of major vessels</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp3}}" name="exp13" required="">
+                <label>thal</label>
+            </div>
+             
+            <input type="submit" name="submit" value="predict" class="submitbtn" />
+        </form><br>
+        <h2>Target : {{predicted}}</h2>
+        
+    </div>
+</body>
+</html>
